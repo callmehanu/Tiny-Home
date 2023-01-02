@@ -1,0 +1,127 @@
+@import url('https://fonts.cdnfonts.com/css/chillax?styles=134675,134677,134672');
+
+*{
+	font-family: 'Chillax', sans-serif;
+}
+html {
+   min-height: 100%;
+   height: 100%;
+   background-image: url("https://images.unsplash.com/photo-1532019333101-b0f43c16a912?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80");
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center center;
+   animation: enLight 1.25s cubic-bezier(0.79, 0.33, 0.09, 0.74) forwards;
+   will-change: opacity;
+   user-select: none;
+}
+@keyframes jumpDock {
+	0% {transform:translateY(-60px); opacity:0}
+	100% {transform:translateY(-140px); opacity:1}
+}
+@keyframes enLight {
+	0% {opacity:0}
+	100% {opacity:1}
+}
+@keyframes revealSearch {
+	0% {transform:scale(0.8); transform:translateY(50px); opacity:0; }
+	100% {transform:scale(1); transform:translateY(0px); opacity:1;}
+}
+.body {
+	height: 100%;
+	margin: 0px;
+	overflow: hidden;
+}
+.main {
+	height: 100%;
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 0.3) 100% );
+	display: grid;
+	grid-template-rows: 1.5fr 110px 110px 1fr 1fr;
+	align-items: center;
+    justify-content: center;
+}
+
+
+
+
+.brandBar {
+	grid-row: 2;
+	display: flex;
+	justify-content: center;
+}
+.brandBar .brandLogo {
+	opacity: 0;
+	width: 290px;
+	padding: 2rem 0;
+	animation: revealSearch 0.4s cubic-bezier(0.79, 0.33, 0.09, 0.74) forwards 0.35s;
+}
+
+
+
+
+
+.searchBar {
+	grid-row: 3;
+	opacity: 0;
+	animation: revealSearch 0.4s cubic-bezier(0.79, 0.33, 0.09, 0.74) forwards 0.35s;
+}
+.searchBar .searchInput {
+	border: 0px;
+	font-size:1.02rem;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.2);
+	padding: 1rem 1.6rem;
+	outline: 0px;
+	border-radius: 50px;
+	transition:all 0.3s ease-in-out;
+	width: 400px;
+	letter-spacing: -0.03rem;
+}
+.searchBar .searchInput::placeholder {
+	color: rgba(255, 255, 255, 0.6);
+}
+.searchBar .searchInput:hover  {
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+.appDock {
+	width:100%;
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	animation: jumpDock 0.3s cubic-bezier(0.79, 0.33, 0.09, 0.74) forwards 0.9s;
+	will-change: transform opacity;
+	bottom: -60px;
+}
+.appDock .appButton {
+	display:flex;
+	position: relative;
+	border-radius: 1.2rem;
+	margin: 0rem 1rem;
+	background-color: rgba(0, 0, 0, 0.2);
+	will-change: transform;
+	transition:all 250ms cubic-bezier(0.79, 0.33, 0.09, 0.74);
+}
+.appButton a {
+	border: 0px;
+	padding: 0px;
+}
+.appDock .appIcon {
+	width: 64px;
+	margin: 0px;
+	display: block;
+}
+.appDock .appButton:hover {
+	transform:translateY(-8px);
+	/*animation: jumpapp 0.7s 1;*/
+}
+.appDock .appName {
+	color:white;
+	font-weight: 500;
+	position:absolute;
+	bottom: -30px;
+	text-align: center;
+	width: 100%;
+}
