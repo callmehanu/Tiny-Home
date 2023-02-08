@@ -1,3 +1,3 @@
-# Alegra Extension
+# Tiny Home
 
-**Repositorio para el laucher de Alegra como extension**
+**Repositorio de la extension Tiny Home parte del projecto Tiny Boxes**
